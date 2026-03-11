@@ -37,7 +37,7 @@ if not api_key:
     st.info("Please add the groq api key")
 
 ## LLM model
-llm=ChatGroq(groq_api_key=api_key,model_name="Llama3-8b-8192",streaming=True)
+llm=ChatGroq(groq_api_key=api_key,model_name="llama-3.3-70b-versatile",streaming=True)
 
 @st.cache_resource(ttl="2h")
 def configure_db(db_uri,mysql_host=None,mysql_user=None,mysql_password=None,mysql_db=None):
