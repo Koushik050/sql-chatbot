@@ -4,4 +4,6 @@ langchain-community
 langchain-groq
 sqlalchemy
 mysql-connector-python
+duckduckgo_search
+pandas
 python-dotenv
