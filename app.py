@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path
 from langchain_community.agent_toolkits.sql.base import create_sql_agent
 from langchain_community.utilities import SQLDatabase
-from langchain.agents import AgentType
+
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.agent_toolkits import SQLDatabaseToolkit
 from sqlalchemy import create_engine
@@ -63,7 +63,7 @@ agent = create_sql_agent(
     llm=llm,
     toolkit=toolkit,
     verbose=True,
-    agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION
+    agent_type="zero-shot-react-description"
 )
 
 if "messages" not in st.session_state or st.sidebar.button("Clear message history"):
