@@ -20,7 +20,7 @@ COPY --chown=user . .
 
 EXPOSE 7860
 
-ENTRYPOINT ["streamlit", "run", "app.py", \
+ENTRYPOINT ["/home/user/.local/bin/streamlit", "run", "app.py", \
     "--server.port=7860", \
     "--server.address=0.0.0.0", \
     "--server.enableCORS=false", \
